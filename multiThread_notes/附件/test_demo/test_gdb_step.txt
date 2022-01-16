@@ -1,0 +1,24 @@
+多线程死锁调试小技巧
+编译代码
+#   g++ -Wall -std=c++11 dead_lock_demo.cpp -o dead_lock_demo -g -pthread
+#   ./dead_lock_demo  
+#   ps -aux | grep dead_lock_demo
+
+# 使用gdb attach
+#   gdb attach pid
+    #   info thread
+    #   thread 2
+    #    where
+    #    f 4  
+    
+    #   thread 3
+    #    where
+    #    f 4
+
+
+# 使用gdb core dump
+#   kill -11 pid
+#   gdb dead_lock_demo core
+	#   thread apply all bt
+	#    thread 2
+	#    f 4  

@@ -1,0 +1,71 @@
+进程与线程
+线程更快,轻量级,但是存在同步问题.
+Thread的使用
+0.start
+1.join和detach.以及不设置
+2.异常
+3.RAII
+4.gei_id
+5.detach 引用问题
+6.std::move
+7. hardware_concurrrency()
+
+Data Race and Mutex
+1.RAII
+2.Data Race (多线程取栈元素)
+3.使用Mutex保护
+
+死锁
+0.多个Mutex顺序不当
+避免死锁{
+	0.使用一个mutex.
+	1.持有lock的函数不再调用其他的用户函数.
+	2.std::lock多个mutex
+	3.lock顺序一致
+}
+
+unique_lock和延时初始化
+demo: open file并写数据.open file 只做一次
+写数据做多次.
+open_and_write();
+0.需要线程安全,单mutex,存在打开2次的可能,使用uniq
+1.lock 性能降低
+2.std::once_flag
+
+condition Variable
+2个线程实现PV操作,难以控制sleep/while
+wait虚假唤醒
+notify_one
+notify_all
+
+std::future和async
+fu.get()
+std::launch方式
+promise<int> p;
+p.set();
+p.set_ex();//异常也可以设置
+
+各种可以调用的函数
+std::bind
+std::async
+std::call_once()
+
+packaged_tast
+回顾:
+thread
+mutex
+lock_guard
+Time
+
+
+
+
+
+
+
+
+
+
+
+
+

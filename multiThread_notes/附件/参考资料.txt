@@ -1,0 +1,7 @@
+CppCoreGuidelines
+Cpp-Concurrency-in-Action-2ed
+efftive_modern_c++
+modern_cpp_tutirial
+陈硕: multithreaded_server 
+http://files.cppblog.com/Solstice/multithreaded_server.pdf
+https://www.cnblogs.com/Solstice/archive/2013/01/28/2879366.html
